@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Users/cwy/NetBeansProjects/EPDA/EPDA-ejb/src/java/model/Order_ProductFacade.java</file>
+            <file>file:/Users/cwy/NetBeansProjects/EPDA/EPDA-ejb/src/java/model/OrdersFacade.java</file>
+            <file>file:/Users/cwy/NetBeansProjects/EPDA/EPDA-ejb/src/java/model/AbstractFacade.java</file>
+            <file>file:/Users/cwy/NetBeansProjects/EPDA/EPDA-ejb/src/java/model/CustomerFacade.java</file>
+            <file>file:/Users/cwy/NetBeansProjects/EPDA/EPDA-ejb/src/java/model/PickupFacade.java</file>
+            <file>file:/Users/cwy/NetBeansProjects/EPDA/EPDA-ejb/src/java/model/Order_Product.java</file>
+            <file>file:/Users/cwy/NetBeansProjects/EPDA/EPDA-ejb/src/java/model/RatingFeedbackFacade.java</file>
+            <file>file:/Users/cwy/NetBeansProjects/EPDA/EPDA-ejb/src/java/model/DeliveryFacade.java</file>
+            <file>file:/Users/cwy/NetBeansProjects/EPDA/EPDA-ejb/src/java/model/Customer.java</file>
+            <file>file:/Users/cwy/NetBeansProjects/EPDA/EPDA-ejb/src/java/model/RatingFeedback.java</file>
+        </group>
+    </open-files>
+</project-private>
