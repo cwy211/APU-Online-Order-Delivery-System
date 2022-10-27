@@ -1,0 +1,65 @@
+<%-- 
+    Document   : confirmEditOrder
+    Created on : 28-Feb-2022, 16:12:36
+    Author     : cwy
+--%>
+
+<%@page import="model.ConfirmProduct"%>
+<%@page import="java.util.List"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+                <jsp:include page="banner.jsp"/>
+        <%
+            if(request.getAttribute("confirmOrderList")!=null){
+                List<ConfirmProduct> confirmOrderList = (List<ConfirmProduct>)request.getAttribute("confirmOrderList");
+                String orderId = (String)request.getAttribute("orderId");
+                double total=0;
+            %>
+        <br><br> 
+            <form action="EditOrder" method="POST"> 
+
+                <table border="1" width="100%">
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Amount</th>
+                    </tr>
+                    <% for (ConfirmProduct product:confirmOrderList){
+                        total=total+product.getAmount();
+                    %>
+                        <tr>
+                            <input type="text" name="productId" hidden value="<%= product.getProductId()%>">
+                            <td> <%= product.getProductName()%></td>
+                            <td> <%= product.getPrice()%></td>
+                            <td><input type="text" name="quantity" hidden value="<%= product.getQuantity()%>"> <%= product.getQuantity()%></td>
+                            <td><%= product.getAmount()%></td>
+                        </tr>
+                        
+                    <% 
+                        }
+                    %>  
+                </table>
+                <input type="text" name="totalAmount" hidden value="<%=total%>"> 
+                <input type="text" name="orderId" size="20" hidden value="<%=orderId%>">
+
+                Total amount payable:RM<%=total%>
+                                    <% 
+                        }
+                    %> 
+                    
+<!--                    <input type="radio" name="type" value="delivery">Delivery
+                    <input type="radio" name="type" value="pickup">Pick up-->
+                    <button type="submit">Confirm Order</button>
+            </form>
+                    <form action="homePage.jsp">
+                        <button type="submit">Cancel</button>
+                    </form>
+    </body>
+</html>
